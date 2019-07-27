@@ -1,0 +1,76 @@
+:root {
+    font-size: 18px;
+
+    --main-text-color: #515151;
+    --template-color: #FFC53D;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--main-text-color);
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 5.5rem;
+    color: var(--template-color);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.header {
+    height: 585px;
+    background: url("../img/bg.png") no-repeat;
+    background-size: cover;
+}
+
+.header p {
+    font-size: 2rem;
+}
+
+nav a {
+    color: var(--main-text-color);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--template-color);
+    text-decoration: none;
+}
+
+.button-orange {
+    border: solid 1px var(--template-color);
+    border-radius: 15px;
+    color: var(--template-color);
+    font-weight: bold;
+    padding: 10px 50px;
+    cursor: pointer;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+}
+
+.button-orange:hover {
+    color: white;
+    background-image: linear-gradient(to right, #FF9A3D, #FFC53D);
+}
+
+.bd-gray {
+    background-color: red;
+}
