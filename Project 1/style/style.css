@@ -2,7 +2,10 @@
     font-size: 18px;
 
     --main-text-color: #515151;
-    --template-color: #FFC53D;
+    --header-text-color: #222222;
+    --template-text-color: #FFC53D;
+    --template-bg-color: #FF9A3D;
+    --template-bg-gray: #FAFAFF;
 }
 
 body {
@@ -11,9 +14,17 @@ body {
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--header-text-color);
+}
+
 h1 {
     font-size: 5.5rem;
-    color: var(--template-color);
+    color: var(--template-text-color);
 }
 
 h2 {
@@ -21,7 +32,8 @@ h2 {
 }
 
 h4 {
-    font-size: 32px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.75rem;
     font-weight: bold;
 }
 
@@ -51,14 +63,14 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--template-color);
+    color: var(--template-text-color);
     text-decoration: none;
 }
 
 .button-orange {
-    border: solid 1px var(--template-color);
+    border: solid 1px var(--template-text-color);
     border-radius: 15px;
-    color: var(--template-color);
+    color: var(--template-text-color);
     font-weight: bold;
     padding: 10px 50px;
     cursor: pointer;
@@ -71,6 +83,78 @@ nav a:hover {
     background-image: linear-gradient(to right, #FF9A3D, #FFC53D);
 }
 
-.bd-gray {
-    background-color: red;
+.bg-gray {
+    background-color: var(--template-bg-gray);
+}
+
+.bg-orange {
+    background-color: var(--template-bg-color);
+}
+
+.contact-info {
+    padding: 25px 50px;
+    color: white;
+}
+
+.contact-info p {
+    width: 75%;
+    line-height: 1.7;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-address {
+    position: absolute;
+    width: calc(100% - 50px);
+    bottom: 10px;
+}
+
+.contact-form {
+    padding: 25px 50px;
+}
+
+.triangle-right {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 24px solid var(--template-bg-color);
+    border-bottom: 20px solid transparent;
+}
+
+.contact-form h2 {
+    font-weight: bold;
+}
+
+.contact-form .form-control {
+    font-family: 'Ubuntu', sans-serif;
+    height: calc(2rem + .75rem + 2px);
+    color: #A0A0A0;
+    background-color: var(--template-bg-gray);
+    border: none;
+    border-radius: 15px;
+}
+
+.contact-form textarea.form-control {
+    height: auto;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form .button-orange{
+    display: block;
+    float: right;
+}
+
+footer {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .75rem;
+    color: #A0A0A0;
 }
