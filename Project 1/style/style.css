@@ -8,10 +8,15 @@
     --template-bg-gray: #FAFAFF;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     color: var(--main-text-color);
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 h1,
@@ -20,6 +25,10 @@ h3,
 h4,
 h5 {
     color: var(--header-text-color);
+}
+
+nav h5{
+    color: var(--main-text-color);
 }
 
 h1 {
@@ -91,9 +100,23 @@ nav a:hover {
     background-color: var(--template-bg-color);
 }
 
+.box{
+    margin: 75px auto;
+}
+
+.box .bg-gray{
+    position: absolute;
+    width: 75%;
+    height: 100%;
+}
+
 .contact-info {
     padding: 25px 50px;
     color: white;
+}
+
+.contact-info .icon{
+    width: 50px;
 }
 
 .contact-info p {
