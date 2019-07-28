@@ -17,6 +17,7 @@
     <link href="./style/style.css" rel="stylesheet">
 
     <title>CodersCamp - Portfolio</title>
+    <script src="https://kit.fontawesome.com/e292a13ae8.js"></script>
 </head>
 
 <body>
@@ -45,10 +46,10 @@
                 My name is Designer.
             </p>
             <div class="d-flex justify-content-center">
-                <a href="#" class="cursor-pointer px-3"><img src="./img/icons/tw.png" alt=""></a>
-                <a href="#" class="cursor-pointer px-3"><img src="./img/icons/in.png" alt=""></a>
-                <a href="#" class="cursor-pointer px-3"><img src="./img/icons/vector.png" alt=""></a>
-                <a href="#" class="cursor-pointer px-3"><img src="./img/icons/fb.png" alt=""></a>
+                <a href="#" class="cursor-pointer px-3"><i class="fab fa-twitter circle-white"></i></a>
+                <a href="#" class="cursor-pointer px-3"><i class="fab fa-linkedin-in circle-white"></i></a>
+                <a href="#" class="cursor-pointer px-3"><i class="fab fa-github"></i></a>
+                <a href="#" class="cursor-pointer px-3"><i class="fab fa-facebook-f circle-white"></i></i></a>
             </div>
         </div>
     </div>
@@ -67,50 +68,69 @@
         </div>
     </div>
 
-
-    <div class="container box">
-        <h4 class="pl-2">About me</h4>
-        <div class="row shadow-sm my-2 p-4">
-            <div class="col-2">
-                <div>
-                    <img src="img/profile_foto.png" alt="">
+    <div class="bg-gray-left">
+        <div class="container box about-me">
+            <h4 class="pl-2">About me</h4>
+            <div class="row bg-white shadow-sm p-4">
+                <div class="col-2">
+                    <div>
+                        <img class="round" src="img/profile_foto.png" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li>Full name: <span>Designer</span></li>
+                        <li>Age: <span>21</span></li>
+                        <li>Profile: <span>fullstack</span></li>
+                        <li>Phone: <span>+48 123-456-789</span></li>
+                        <li>e-mail: <span><a href="mailto:anight-coding@dev.com">night-coding@dev.com</a></span></li>
+                    </ul>
+                </div>
+                <div class="col-6 border-color-left">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur. ex ea commodo consequat.
                 </div>
             </div>
-            <div class="col-4">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="col-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. ex ea commodo consequat.
+        </div>
+    </div>
+
+    <div class="bg-gray-right">
+        <div class="container box skills">
+            <h4 class="">Skills</h4>
+            <div class="row bg-white text-center shadow-sm p-4">
+                <div class="col-4">
+                    <div>
+                        <img src="img/icons/ui.svg" alt="">
+                    </div>
+                    <div>
+                        <h5>UX/UI</h5>
+                        <p>Figma</p>
+                    </div>
+                </div>
+                <div class="col-4 border-color-left">
+                    <img src="img/icons/icon_frontend.svg" alt="">
+                    <div>
+                        <h5>Front End</h5>
+                        <p>HTML, CSS, JavaScript</p>
+                    </div>
+                </div>
+                <div class="col-4 border-color-left">
+                    <img src="img/icons/icon_backend.svg" alt="">
+                    <div>
+                        <h5>Back End</h5>
+                        <p>PHP, Node.js</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container box">
-        <h4 class="pl-2">Skills</h4>
-        <div class="row shadow-sm my-2 p-4">
-            <div class="col-4">
-            </div>
-            <div class="col-4">
-            </div>
-            <div class="col-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. ex ea commodo consequat.
-            </div>
-        </div>
-    </div>
-
-    <div class="fluid p-0 box">
+    <div class="fluid p-0 box portfolio">
         <h4 class="pl-2 text-center">Portfolio</h4>
         <div class="d-flex wrap">
             <div><img src="img/portfolio_img1.png" alt=""></div>
@@ -123,7 +143,7 @@
         </div>
     </div>
 
-    <div class="containter-fluid bg-gray px-4 pt-1 pb-4">
+    <div class="bg-gray">
         <div class="container">
             <h4 class="pl-2">Contact us</h4>
             <div class="row bg-white">
@@ -135,10 +155,10 @@
                     </p>
                     <div class="contact-address">
                         <div class="d-flex pb-2">
-                            <a href="#" class="cursor-pointer pr-2"><img src="./img/icons/tw.png" alt=""></a>
-                            <a href="#" class="cursor-pointer px-2"><img src="./img/icons/in.png" alt=""></a>
-                            <a href="#" class="cursor-pointer px-2"><img src="./img/icons/vector.png" alt=""></a>
-                            <a href="#" class="cursor-pointer px-2"><img src="./img/icons/fb.png" alt=""></a>
+                            <a href="#" class="cursor-pointer pr-2"><i class="fab fa-twitter circle-white"></i></a>
+                            <a href="#" class="cursor-pointer px-2"><i class="fab fa-linkedin-in circle-white"></i></a>
+                            <a href="#" class="cursor-pointer px-2"><i class="fab fa-github"></i></a>
+                            <a href="#" class="cursor-pointer px-2"><i class="fab fa-facebook-f circle-white"></i></i></a>
                         </div>
                         <p>
                             <strong>Designer<br />
