@@ -13,6 +13,8 @@ body {
     color: var(--main-text-color);
     line-height: 1.7;
     /*box-sizing: border-box;*/
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 h1,
@@ -51,7 +53,7 @@ h5 {
     font-size: 1rem;
 }
 
-.circle-white{
+.circle-white {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -141,18 +143,18 @@ nav a:hover {
 
 .bg-gray {
     background-color: var(--template-bg-gray);
-    background-color: #b13232;
+    /*background-color: #b13232;*/
     margin-top: 50px;
 }
 
 .bg-gray-left {
     background-image: linear-gradient(to right, var(--template-bg-gray) 70%, white 60%);
-    background-image: linear-gradient(to right, #b13232 70%, white 60%);
+    /*background-image: linear-gradient(to right, #b13232 70%, white 60%);*/
 }
 
 .bg-gray-right {
     background-image: linear-gradient(to left, var(--template-bg-gray) 70%, white 60%);
-    background-image: linear-gradient(to left, #b13232 70%, white 60%);
+    /*background-image: linear-gradient(to left, #b13232 70%, white 60%);*/
 }
 
 .bg-orange {
@@ -176,8 +178,8 @@ nav a:hover {
 }
 
 .skills img {
-    width: 83px;
-    height: auto;
+    width: auto;
+    height: 83px;
 }
 
 .skills h4 {
@@ -187,6 +189,7 @@ nav a:hover {
 .skills h5 {
     font-weight: bold;
     font-size: 1.4rem;
+    padding-top: 45px;
     color: var(--template-text-color);
     letter-spacing: 0;
 }
@@ -261,4 +264,40 @@ footer {
     font-family: 'Ubuntu', sans-serif;
     font-size: .75rem;
     color: #A0A0A0;
+}
+
+@media screen and (max-width: 991px) {
+    .contact-address {
+        position: relative;
+    }
+
+    .triangle-right {
+        top: 0px;
+        left: 50px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 24px solid var(--template-bg-color);
+    }
+}
+
+@media only screen and (max-width: 767px){
+    ul {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    .border-color-left {
+        border-left: none;
+        border-top: 4px dashed var(--template-text-color);
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    :root {
+        font-size: 16px;
+    }
 }
