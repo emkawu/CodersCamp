@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title></title>
+    <title>Portfolio | CodersCamp</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,10 +29,10 @@
             <div class="mr-2"><img src="./img/logo.svg" alt="Portfolio" title="Portfolio" /></div>
             <h5 class="my-0 mr-md-auto font-weight-bold">Dev</h5>
             <nav class="my-2 font-weight-bold">
-                <a class="py-2 px-4" href="#">About me</a>
-                <a class="py-2 px-4" href="#">Skills</a>
-                <a class="py-2 px-4" href="#">Portfolio</a>
-                <a class="py-2 pl-4" href="#">Contact</a>
+                <a class="py-2 px-2 px-sm-4" href="#">About me</a>
+                <a class="py-2 px-2 px-sm-4" href="#">Skills</a>
+                <a class="py-2 px-2 px-sm-4" href="#">Portfolio</a>
+                <a class="py-2 pl-2 pl-sm-4" href="#">Contact</a>
             </nav>
         </div>
     </nav>
@@ -132,18 +132,37 @@
 
     <div class="container-fluid p-0 box portfolio">
         <h4 class="pl-2 text-center">Portfolio</h4>
-        <div class="d-flex align-content-stretch">
-            <div class="flex-fill">
+        <div class="d-flex flex-lg-row flex-column">
+            <div class="position-relative">
+                <div class="portfolio-hover">
+                    <h4>Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <div class="button-orange-hover">
+                        View
+                    </div>
+                </div>
                 <img src="img/portfolio_img1.png" alt="">
             </div>
-            <div class="flex-fill"><img src="img/portfolio_img2.png" alt=""></div>
-            <div class="flex-fill"><img src="img/portfolio_img3.png" alt=""></div>
+            <div class=""><img src="img/portfolio_img2.png" alt=""></div>
+            <div class=""><img src="img/portfolio_img3.png" alt=""></div>
         </div>
-        <div class="d-flex">
-            <div><img src="img/portfolio_img4.png" alt=""></div>
-            <div><img src="img/portfolio_img5.png" alt=""></div>
+        <div class="d-flex flex-lg-row flex-column">
+            <div class="flex-fill "><img src="img/portfolio_img4.png" alt=""></div>
+            <div class="flex-fill position-relative portfolio-img">
+                <div class="portfolio-hover">
+                    <h4>Design project</h4>
+                    <p>xcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.</p>
+                    <div class="button-orange-hover">
+                        View
+                    </div>
+                </div>
+                <img src="img/portfolio_img5.png" alt="">
+            </div>
         </div>
     </div>
+
 
     <div class="bg-gray">
         <div class="container">
@@ -160,7 +179,8 @@
                             <a href="#" class="cursor-pointer pr-2"><i class="fab fa-twitter circle-white"></i></a>
                             <a href="#" class="cursor-pointer px-2"><i class="fab fa-linkedin-in circle-white"></i></a>
                             <a href="#" class="cursor-pointer px-2"><i class="fab fa-github"></i></a>
-                            <a href="#" class="cursor-pointer px-2"><i class="fab fa-facebook-f circle-white"></i></i></a>
+                            <a href="#" class="cursor-pointer px-2"><i
+                                    class="fab fa-facebook-f circle-white"></i></i></a>
                         </div>
                         <p>
                             <strong>Designer<br />
@@ -177,7 +197,7 @@
                     <input type="text" class="form-control mb-2" placeholder="Name">
                     <input type="email" class="form-control mb-2" placeholder="Your e-mail address">
                     <input type="text" class="form-control mb-2" placeholder="Topic">
-                    <textarea class="form-control mb-2" rows="6"></textarea>
+                    <textarea class="form-control mb-2" placeholder="Message" rows="6"></textarea>
                     <div class="button-orange">
                         Send
                     </div>
@@ -202,5 +222,4 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 </body>
-
 </html>
