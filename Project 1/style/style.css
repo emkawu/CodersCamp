@@ -10,9 +10,9 @@
 
 body {
     font-family: 'Raleway', sans-serif;
+    color: #515151; /*fix for IE*/
     color: var(--main-text-color);
     line-height: 1.7;
-    /*box-sizing: border-box;*/
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -22,15 +22,18 @@ h2,
 h3,
 h4,
 h5 {
+    color: #222222;  /*fix for IE*/
     color: var(--header-text-color);
 }
 
 nav h5 {
+    color: #515151; /*fix for IE*/
     color: var(--main-text-color);
 }
 
 h1 {
     font-size: 5.5rem;
+    color: #FFC53D; /*fix for IE*/
     color: var(--template-text-color);
 }
 
@@ -71,6 +74,7 @@ h5 {
 .fa-twitter,
 .fa-linkedin-in,
 .fa-facebook-f {
+    color:#FF9A3D; /*fix for IE*/
     color: var(--template-bg-color);
 }
 
@@ -89,6 +93,7 @@ h5 {
 }
 
 .border-color-left {
+    border-left: 4px dashed #FFC53D; /*fix for IE*/
     border-left: 4px dashed var(--template-text-color);
 }
 
@@ -103,20 +108,24 @@ h5 {
 }
 
 nav a {
+    color: #515151; /*fix for IE*/
     color: var(--main-text-color);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
 nav a:hover {
+    color: #FFC53D; /*fix for IE*/
     color: var(--template-text-color);
     text-decoration: none;
 }
 
 .button-orange-hover,
 .button-orange {
+    border: solid 1px #FFC53D; /*fix for IE*/
     border: solid 1px var(--template-text-color);
     border-radius: 15px;
+    color: #FFC53D; /*fix for IE*/
     color: var(--template-text-color);
     font-weight: bold;
     padding: 10px 50px;
@@ -128,13 +137,15 @@ nav a:hover {
 
 .button-orange-hover {
     color: white;
-    background-image: linear-gradient(to right, #FF9A3D, #FFC53D);
+    background-image: linear-gradient(to right, #FF9A3D, #FFC53D); /*fix for IE*/
+    background-image: linear-gradient(to right, var(--template-bg-color), var(--template-text-color));
     border-width: 0px;
 }
 
 .button-orange:hover {
     color: white;
-    background-image: linear-gradient(to right, #FF9A3D, #FFC53D);
+    background-image: linear-gradient(to right, #FF9A3D, #FFC53D); /*fix for IE*/
+    background-image: linear-gradient(to right, var(--template-bg-color), var(--template-text-color));
 }
 
 .bg-gray,
@@ -150,22 +161,23 @@ nav a:hover {
 }
 
 .bg-gray {
+    background-color: #FAFAFF; /*fix for IE*/
     background-color: var(--template-bg-gray);
-    /*background-color: #b13232;*/
     margin-top: 50px;
 }
 
 .bg-gray-left {
+    background-image: linear-gradient(to right, #FAFAFF 70%, white 60%); /*fix for IE*/
     background-image: linear-gradient(to right, var(--template-bg-gray) 70%, white 60%);
-    /*background-image: linear-gradient(to right, #b13232 70%, white 60%);*/
 }
 
 .bg-gray-right {
+    background-image: linear-gradient(to left, #FAFAFF 70%, white 60%); /*fix for IE*/
     background-image: linear-gradient(to left, var(--template-bg-gray) 70%, white 60%);
-    /*background-image: linear-gradient(to left, #b13232 70%, white 60%);*/
 }
 
 .bg-orange {
+    background-color: #FF9A3D; /*fix for IE*/
     background-color: var(--template-bg-color);
 }
 
@@ -176,6 +188,7 @@ nav a:hover {
 
 .box ul li span,
 .box ul li span a {
+    color: #FFC53D; /*fix for IE*/
     color: var(--template-text-color);
     text-decoration: none;
 }
@@ -198,6 +211,7 @@ nav a:hover {
     font-weight: bold;
     font-size: 1.4rem;
     padding-top: 45px;
+    color: #FFC53D; /*fix for IE*/
     color: var(--template-text-color);
     letter-spacing: 0;
 }
@@ -208,7 +222,7 @@ nav a:hover {
     height: 100%;
     padding: 1rem;
     color: white;
-    background-image: linear-gradient(to top, rgba(255, 154, 61, 0.5), rgba(34, 34, 34, 0.5))
+    background-image: linear-gradient(to top, rgba(255, 154, 61, 0.5), rgba(34, 34, 34, 0.5));
 }
 
 .portfolio-hover h4 {
@@ -258,6 +272,7 @@ nav a:hover {
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
+    border-left: 24px solid #FF9A3D; /*fix for IE*/
     border-left: 24px solid var(--template-bg-color);
     border-bottom: 20px solid transparent;
 }
@@ -270,6 +285,7 @@ nav a:hover {
     font-family: 'Ubuntu', sans-serif;
     height: calc(2rem + .75rem + 2px);
     color: #A0A0A0;
+    background-color: #FAFAFF; /*fix for IE*/
     background-color: var(--template-bg-gray);
     border: none;
     border-radius: 15px;
@@ -311,6 +327,7 @@ footer {
         left: 50px;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
+        border-top: 24px solid #FF9A3D; /*fix for IE*/
         border-top: 24px solid var(--template-bg-color);
     }
 }
@@ -322,12 +339,6 @@ footer {
 
     h1 {
         font-size: 4rem;
-    }
-
-    .border-color-left {
-        border-left: none;
-        border-top: 4px dashed var(--template-text-color);
-        padding-top: 20px;
     }
 
     .portfolio-img {
@@ -348,5 +359,12 @@ footer {
 @media only screen and (max-width: 575px) {
     :root {
         font-size: 16px;
+    }
+
+    .border-color-left {
+        border-left: none;
+        border-top: 4px dashed #FFC53D; /*fix for IE*/
+        border-top: 4px dashed var(--template-text-color);
+        padding-top: 20px;
     }
 }
