@@ -9,14 +9,15 @@ var temp = document.querySelector('#temp');
 var day = document.querySelector('#dayToday');
 var date = document.querySelector('#dateToday');
 //var p = document.querySelector('p');
+var p = document.querySelector('#desc');
 var canvas = document.querySelector('#canvasToday');
 var wind = document.querySelector('#windToday');
 var humidity = document.querySelector('#humidityToday');
 var pressure = document.querySelector('#pressureToday');
 var clouds = document.querySelector('#cloudsToday');
 
-var search = document.querySelector('#search');
-var listaMiast = document.querySelector('#listaMiast');
+//var search = document.querySelector('#search');
+//var listaMiast = document.querySelector('#listaMiast');
 
 var icons = new Skycons({
     "color": "#e83e8c"
@@ -61,6 +62,11 @@ function setIcons() {
     icons.play();
 }
 
+
+// --------- WYSZUKIWANIE MIEJSCOWOŚCI --------------- //
+
+
+/*
 function getCitiesList() {
     fetch('http://127.0.0.1:5500/js/city.list.json')
         .then(response => response.json())
@@ -75,27 +81,6 @@ function getCitiesList() {
 
 function createUrl() {
     return `https://api.openweathermap.org/data/2.5/weather?id=${city}&APPID=${api}`;
-}
-
-function getWeatherCity(id) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?id=${id}&lang=pl&APPID=${api}`)
-        .then(response => response.json())
-        .then(data => {
-            //console.log(data);
-            cityName.innerText = data.name;
-            day.innerText = `${(new Date()).toLocaleDateString('en-US',{ weekday: 'long'})}`;
-            date.innerHTML = `<small>${new Date().toLocaleDateString()}</small>`;
-            temp.innerText = `${Math.round(data.main.temp - 273.15)}°C`;
-            //p.innerText = data.weather[0].description;
-            canvas.id = data.weather[0].icon;
-            humidity.innerText = `${data.main.humidity}%`;
-            pressure.innerText = `${data.main.pressure}hpa`
-            wind.innerText = `${data.wind.speed} m/s`;
-            clouds.innerText = `${data.clouds.all}%`;
-
-            setIcons();
-        })
-        .catch(e => console.error(`error getWeatherCity: ${e.message}`));
 }
 
 function findMaches(wordToMach, cities) {
@@ -134,10 +119,35 @@ function showWeather(e) {
     if (!e.target.matches('li')) return;
     getWeatherCity(e.target.id);
 }
+*/
+
+// --------- END WYSZUKIWANIE MIEJSCOWOŚCI --------------- //
+
+
+function getWeatherCity(id) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?id=${id}&lang=pl&APPID=${api}`)
+        .then(response => response.json())
+        .then(data => {
+            //console.log(data);
+            cityName.innerText = data.name;
+            day.innerText = `${(new Date()).toLocaleDateString('pl-PL',{ weekday: 'long'})}`;
+            date.innerHTML = `<small>${new Date().toLocaleDateString()}</small>`;
+            temp.innerText = `${Math.round(data.main.temp - 273.15)}°C`;
+            p.innerText = data.weather[0].description;
+            canvas.id = data.weather[0].icon;
+            humidity.innerText = `${data.main.humidity}%`;
+            pressure.innerText = `${data.main.pressure}hpa`
+            wind.innerText = `${data.wind.speed} m/s`;
+            clouds.innerText = `${data.clouds.all}%`;
+
+            setIcons();
+        })
+        .catch(e => console.error(`error getWeatherCity: ${e.message}`));
+}
 
 getWeatherCity('3081368');
-getCitiesList();
-setIcons();
+//getCitiesList();
+//setIcons();
 
 //search.addEventListener('keyup', searchCity);
 //listaMiast.addEventListener('click', showWeather);
