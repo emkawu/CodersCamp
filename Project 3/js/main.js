@@ -3,15 +3,23 @@ var api = 'ccae267e1a55d53cf1ab8f6571f60afc';
 var city = '5226932';
 var citiesList;
 
-var body = document.querySelector('body');
-var h1 = document.querySelector('h1');
-var p = document.querySelector('p');
-var canvas = document.querySelector('canvas');
+//var body = document.querySelector('body');
+var cityName = document.querySelector('#city-name');
+var temp = document.querySelector('#temp');
+var day = document.querySelector('#dayToday');
+var date = document.querySelector('#dateToday');
+//var p = document.querySelector('p');
+var canvas = document.querySelector('#canvasToday');
+var wind = document.querySelector('#windToday');
+var humidity = document.querySelector('#humidityToday');
+var pressure = document.querySelector('#pressureToday');
+var clouds = document.querySelector('#cloudsToday');
+
 var search = document.querySelector('#search');
 var listaMiast = document.querySelector('#listaMiast');
 
 var icons = new Skycons({
-    "color": "#2196f3"
+    "color": "#e83e8c"
 });
 
 function setIcons() {
@@ -54,7 +62,7 @@ function setIcons() {
 }
 
 function getCitiesList() {
-    fetch('http://127.0.0.1:5500/city.list.json')
+    fetch('http://127.0.0.1:5500/js/city.list.json')
         .then(response => response.json())
         .then(data => {
             //console.log(data);
@@ -70,13 +78,21 @@ function createUrl() {
 }
 
 function getWeatherCity(id) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?id=${id}&APPID=${api}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?id=${id}&lang=pl&APPID=${api}`)
         .then(response => response.json())
         .then(data => {
             //console.log(data);
-            h1.innerText = data.name;
-            p.innerText = data.weather[0].description;
+            cityName.innerText = data.name;
+            day.innerText = `${(new Date()).toLocaleDateString('en-US',{ weekday: 'long'})}`;
+            date.innerHTML = `<small>${new Date().toLocaleDateString()}</small>`;
+            temp.innerText = `${Math.round(data.main.temp - 273.15)}°C`;
+            //p.innerText = data.weather[0].description;
             canvas.id = data.weather[0].icon;
+            humidity.innerText = `${data.main.humidity}%`;
+            pressure.innerText = `${data.main.pressure}hpa`
+            wind.innerText = `${data.wind.speed} m/s`;
+            clouds.innerText = `${data.clouds.all}%`;
+
             setIcons();
         })
         .catch(e => console.error(`error getWeatherCity: ${e.message}`));
@@ -119,8 +135,9 @@ function showWeather(e) {
     getWeatherCity(e.target.id);
 }
 
-getWeatherCity('6695624');
+getWeatherCity('3081368');
 getCitiesList();
-//search.addEventListener('change', searchCity);
-search.addEventListener('keyup', searchCity);
-listaMiast.addEventListener('click', showWeather);
+setIcons();
+
+//search.addEventListener('keyup', searchCity);
+//listaMiast.addEventListener('click', showWeather);

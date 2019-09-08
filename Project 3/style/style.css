@@ -7,3 +7,12 @@ figure {
 	width: 350px;
 	height: 150px;
 }
+
+.table td, .table th{
+	border-top: none;
+	border-bottom: 1px solid #dee2e6;
+}
+
+.no-border{
+	border: none !important;
+}
